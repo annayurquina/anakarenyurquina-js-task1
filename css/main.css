@@ -78,7 +78,9 @@ section {
 }
 
 footer {
-  background-color: hsl(218, 62.2%, 95%)
+  background-color: hsl(218, 62.2%, 95%);
+  display: flex;
+  align-items: center;
 }
 
 #instagram {
@@ -91,4 +93,17 @@ footer {
 
 #whatsapp {
   background-color: #00aa41;
+}
+
+.social {
+  width: 30px;
+  height: 30px;
+  margin-right: 25px;
+}
+.social:last-child {
+  margin-right: 0;
+}
+
+.social:hover{
+  background-color: #3b5998;
 }
