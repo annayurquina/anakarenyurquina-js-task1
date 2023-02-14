@@ -14,7 +14,7 @@
   
   <link rel="stylesheet" href="./css/main.css">
   
-  <title>Amazing Events - Home</title>
+  <title>Amazing Events - Stats</title>
 </head>
 <body>
   <header>
@@ -27,11 +27,11 @@
           </button>
           <div id="mynavbar" class="collapse navbar-collapse">
             <ul class="navbar-nav ms-3">
-              <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
               <li class="nav-item"><a class="nav-link" href="./upcoming.html">Upcoming Events</a></li>
               <li class="nav-item"><a class="nav-link" href="./past-events.html">Past Events</a></li>
-              <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
-              <li class="nav-item"><a class="nav-link" href="./stats.html">Stats</a></li>
+              <li class="nav-item"><a class="nav-link" href="./stats.html">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Stats</a></li>
             </ul>
           </div>
         </div>
@@ -42,103 +42,92 @@
     <section>
       <div>
         <div id="mytitle">
-          <a class="picos" href="./stats.html">&lt</a>
-          <h1>Home</h1>
-          <a class="picos" href="./upcoming.html">&gt</a>
+          <a class="picos" href="./contact.html">&lt</a>
+          <h1>Stats</h1>
+          <a class="picos" href="./index.html">&gt</a>
         </div>
-        <form id="myform">
-          <div id="mycategories">
-            <div>
-              <label for="category1">category1</label>
-              <input type="checkbox" value="category" id="category1">
-            </div>
-            <div>
-              <label for="category2">category2</label>
-              <input type="checkbox" value="category" id="category2">
-            </div>
-            <div>
-              <label for="category3">category3</label>
-              <input type="checkbox" value="category" id="category3">
-            </div>
-            <div>
-              <label for="category4">category4</label>
-              <input type="checkbox" value="category" id="category4">
-            </div>
-            <div>
-              <label for="category5">category5</label>
-              <input type="checkbox" value="category" id="category5">
-            </div>
-          </div>
-
-          <div id="mysearch">
-            <fieldset>
-              <input type="search" placeholder="Search" name="mysearch" size="30" maxlength="25" minlength="4">
-              <input id="btn-search" title="search" type="image" src="./img/search-2-multi-size.ico"></input>
-            </fieldset>
-          </div>
-        </form>
       </div>
       <article class="container">
-        <div class="row g-3">
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="card text-center">
-              <figure>
-                <img class="img-fluid" src="./img/Costume_Party.jpg" alt="custome party">
-              </figure>
-              <div>
-                <h3>Titulo</h3>
-                <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi alias numquam facilis, hic doloribus ipsam distinctio cum et necessitatibus accusantium.</h5>
-              </div>
-              <div class="mycard-footer">
-                <p>Price: $1111</p>
-                <a href="#" class="btn-mas">Ver más...</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="card text-center">
-              <figure>
-                <img class="img-fluid" src="./img/Food_Fair.jpg" alt="custome party">
-              </figure>
-              <div>
-                <h3>Titulo</h3>
-                <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi alias numquam facilis, hic doloribus ipsam distinctio cum et necessitatibus accusantium.</h5>
-              </div>
-              <div class="mycard-footer">
-                <p>Price: $1111</p>
-                <a href="#" class="btn-mas">Ver más...</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="card text-center">
-              <figure>
-                <img class="img-fluid" src="./img/Marathon.jpg" alt="custome party">
-              </figure>
-              <div>
-                <h3>Titulo</h3>
-                <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi alias numquam facilis, hic doloribus ipsam distinctio cum et necessitatibus accusantium.</h5>
-              </div>
-              <div class="mycard-footer">
-                <p>Price: $1111</p>
-                <a href="#" class="btn-mas">Ver más...</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="card text-center">
-              <figure>
-                <img class="img-fluid" src="./img/Museum_Tour.jpg" alt="custome party">
-              </figure>
-              <div class="card-body">
-                <h3 class="card-title">Titulo</h3>
-                <h5 class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi alias numquam facilis, hic doloribus ipsam distinctio cum et necessitatibus accusantium.</h5>
-              </div>
-              <div class="mycard-footer">
-                <p>Price: $1111</p>
-                <a href="#" class="btn-mas">Ver más...</a>
-              </div>
-            </div>
+        <div class="row mt-5">
+          <div class="col">
+            <table class="table table-bordered border-2 border-secondary">
+              <thead>
+                <tr><th colspan="3" class="table-secondary border-2 border-secondary">Events statistics</th></tr>
+                <tr>
+                  <th>Events width the highest percentage of attendance</th>
+                  <th>Events with the lowest percentage of attendance</th>
+                  <th>Event with larger capacity</th>
+                </tr>
+              </thead>
+              <tbody>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tbody>
+    
+              <thead>
+                <tr><th colspan="3" class="table-secondary border-2 border-secondary">Upcoming events statistics by category</th></tr>
+                <tr>
+                  <th>Categories</th>
+                  <th>Revenues</th>
+                  <th>Percentage of attendance</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+    
+              <thead>
+                <tr><th colspan="3" class="table-secondary border-2 border-secondary">Past Events statistics by category</th></tr>
+                <tr>
+                  <th>Categories</th>
+                  <th>Revenues</th>
+                  <th>Percentage of attendance</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+    
+            </table>
           </div>
         </div>
       </article>
@@ -168,18 +157,6 @@
     <h2>FE05-TN</h2>
   </div>
 </footer>
-<!--Footer-->
-
-    <!--<div>
-      <figure><img src="./img/social-media/instagram.png" alt="instagram"></figure>
-      <figure><img src="./img/social-media/facebook.png" alt="facebook"></figure>
-      <figure><img src="./img/social-media/whatsapp.png" alt="whatsapp"></figure>
-    </div>
-    <div>
-      <h2>FE05-TN</h2>
-    </div>-->
-
-
     <!--<a href="https://www.flaticon.es/iconos-gratis/facebook" title="facebook iconos">Facebook iconos creados por Freepik - Flaticon</a>-->
 </body>
 </html>
