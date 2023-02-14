@@ -1,52 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/x-icon" href="./favicon_prueba.ico" />
+  <!--<link rel="icon" type="image/x-icon" href="./1676396375.ico" />-->
+  
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   
   <link rel="stylesheet" href="./css/main.css">
-
+  
   <title>Amazing Events - Home</title>
 </head>
 <body>
   <header>
-    <div class="mynav">
-      <figure><img src="./img/Logo_Amazing_Events.png" alt="logo"></figure>
-       <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Upcoming Events</a></li>
-          <li><a href="#">Past Events</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Stats</a></li>
-        </ul>
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-md bg-light border-3 border-bottom border-primary">
+        <div class="container-fluid">
+          <figure class="navbar-brand"><img id="logo" src="./img/Logo_Amazing_Events.png" alt="logo"></figure>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bd-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="mynavbar" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-3">
+              <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Upcoming Events</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Past Events</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Stats</a></li>
+            </ul>
+          </div>
+        </div>
        </nav>
     </div>
   </header>
   <main>
     <section>
       <div>
-        <div>
-          <a href="stats.html">&lt</a>
+        <div id="mytitle">
+          <a class="picos" href="stats.html">&lt</a>
           <h1>Home</h1>
-          <a href="events.html">&gt</a>
+          <a class="picos" href="events.html">&gt</a>
         </div>
-        <form>
-          <div>
-            <label for="category1">category1</label>
-            <input type="checkbox" value="category" id="category1">
-            <label for="category2">category2</label>
-            <input type="checkbox" value="category" id="category2">
-            <label for="category3">category3</label>
-            <input type="checkbox" value="category" id="category3">
-            <label for="category4">category4</label>
-            <input type="checkbox" value="category" id="category4">
-            <label for="category5">category5</label>
-            <input type="checkbox" value="category" id="category5">
+        <form id="myform">
+          <div id="mycategories">
+            <div>
+              <label for="category1">category1</label>
+              <input type="checkbox" value="category" id="category1">
+            </div>
+            <div>
+              <label for="category2">category2</label>
+              <input type="checkbox" value="category" id="category2">
+            </div>
+            <div>
+              <label for="category3">category3</label>
+              <input type="checkbox" value="category" id="category3">
+            </div>
+            <div>
+              <label for="category4">category4</label>
+              <input type="checkbox" value="category" id="category4">
+            </div>
+            <div>
+              <label for="category5">category5</label>
+              <input type="checkbox" value="category" id="category5">
+            </div>
           </div>
 
-          <div>
+          <div id="mysearch">
             <fieldset>
               <input type="search" placeholder="Search" name="mysearch" size="30" maxlength="25" minlength="4">
               <input id="btn-search" title="search" type="image" src="./img/search-2-multi-size.ico"></input>
@@ -54,76 +78,102 @@
           </div>
         </form>
       </div>
-      <article>
-        <div>
-          <figure>
-            <img src="./img/Costume_Party.jpg" alt="custome party">
-          </figure>
-          <div>
-            <h3>Titulo</h3>
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi alias numquam facilis, hic doloribus ipsam distinctio cum et necessitatibus accusantium.</h5>
+      <article class="container">
+        <div class="row g-3">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+              <figure>
+                <img src="./img/Costume_Party.jpg" alt="custome party">
+              </figure>
+              <div>
+                <h3>Titulo</h3>
+                <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi alias numquam facilis, hic doloribus ipsam distinctio cum et necessitatibus accusantium.</h5>
+              </div>
+              <div class="mycard-footer">
+                <p>Price: $1111</p>
+                <a href="#" class="btn-mas">Ver más...</a>
+              </div>
+            </div>
           </div>
-          <div>
-            <p>Price: $1111</p>
-            <a href="#">Ver más...</a>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+              <figure>
+                <img src="./img/Food_Fair.jpg" alt="custome party">
+              </figure>
+              <div>
+                <h3>Titulo</h3>
+                <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi alias numquam facilis, hic doloribus ipsam distinctio cum et necessitatibus accusantium.</h5>
+              </div>
+              <div class="mycard-footer">
+                <p>Price: $1111</p>
+                <a href="#" class="btn-mas">Ver más...</a>
+              </div>
+            </div>
           </div>
-        </div>
-        <div>
-          <figure>
-            <img src="./img/Food_Fair.jpg" alt="custome party">
-          </figure>
-          <div>
-            <h3>Titulo</h3>
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi alias numquam facilis, hic doloribus ipsam distinctio cum et necessitatibus accusantium.</h5>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+              <figure>
+                <img src="./img/Marathon.jpg" alt="custome party">
+              </figure>
+              <div>
+                <h3>Titulo</h3>
+                <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi alias numquam facilis, hic doloribus ipsam distinctio cum et necessitatibus accusantium.</h5>
+              </div>
+              <div class="mycard-footer">
+                <p>Price: $1111</p>
+                <a href="#" class="btn-mas">Ver más...</a>
+              </div>
+            </div>
           </div>
-          <div>
-            <p>Price: $1111</p>
-            <a href="#">Ver más...</a>
-          </div>
-        </div>
-        <div>
-          <figure>
-            <img src="./img/Marathon.jpg" alt="custome party">
-          </figure>
-          <div>
-            <h3>Titulo</h3>
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi alias numquam facilis, hic doloribus ipsam distinctio cum et necessitatibus accusantium.</h5>
-          </div>
-          <div>
-            <p>Price: $1111</p>
-            <a href="#">Ver más...</a>
-          </div>
-        </div>
-        <div>
-          <figure>
-            <img src="./img/Museum_Tour.jpg" alt="custome party">
-          </figure>
-          <div>
-            <h3>Titulo</h3>
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi alias numquam facilis, hic doloribus ipsam distinctio cum et necessitatibus accusantium.</h5>
-          </div>
-          <div>
-            <p>Price: $1111</p>
-            <a href="#">Ver más...</a>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+              <figure>
+                <img src="./img/Museum_Tour.jpg" alt="custome party">
+              </figure>
+              <div class="card-body">
+                <h3 class="card-title">Titulo</h3>
+                <h5 class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi alias numquam facilis, hic doloribus ipsam distinctio cum et necessitatibus accusantium.</h5>
+              </div>
+              <div class="mycard-footer">
+                <p>Price: $1111</p>
+                <a href="#" class="btn-mas">Ver más...</a>
+              </div>
+            </div>
           </div>
         </div>
       </article>
     </section>
   </main>
-  <footer>
+  <!--Footer-->
+<footer class="text-center">
+  <div class="container py-4">
 
-    <div>
-      <div>
-        <figure><img src="./img/social-media/instagram.png" alt="instagram"></figure>
-        <figure><img src="./img/social-media/facebook.png" alt="facebook"></figure>
-        <figure><img src="./img/social-media/whatsapp.png" alt="whatsapp"></figure>
-      </div>
-      <div>
-        <h2>FE05-TN</h2>
-      </div>
+    
+    <!-- Instagram -->
+    <a id="instagram" class="btn text-white btn-floating m-2" href="#!" role="button"><i
+      class="fab fa-instagram"></i></a>
+
+    <!-- Facebook -->
+    <a class="btn text-white btn-floating m-2" style="background-color: #3b5998;" href="#!" role="button"><i
+        class="fab fa-facebook-f"></i></a>
+
+    <!--Whatsapp-->
+    <a class="btn text-white btn-floating m-2" style="background-color: #00aa41;" href="#!" role="button"><i
+      class="fab fa-facebook-f"></i></a>
+  </div>
+</footer>
+<!--Footer-->
+
+    <!--<div>
+      <figure><img src="./img/social-media/instagram.png" alt="instagram"></figure>
+      <figure><img src="./img/social-media/facebook.png" alt="facebook"></figure>
+      <figure><img src="./img/social-media/whatsapp.png" alt="whatsapp"></figure>
     </div>
+    <div>
+      <h2>FE05-TN</h2>
+    </div>-->
 
-    <a href="https://www.flaticon.es/iconos-gratis/facebook" title="facebook iconos">Facebook iconos creados por Freepik - Flaticon</a>
-  </footer>
+
+    <!--<a href="https://www.flaticon.es/iconos-gratis/facebook" title="facebook iconos">Facebook iconos creados por Freepik - Flaticon</a>-->
 </body>
 </html>

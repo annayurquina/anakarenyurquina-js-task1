@@ -1,4 +1,20 @@
+ul, ol, li {
+  list-style: none;
+}
 
+a {
+  text-decoration: none;
+}
+
+section {
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#logo {
+  width: 250px;
+
+}
 
 #btn-search {
   background-color: grey;
@@ -6,4 +22,69 @@
   height: 25px;
   width:25px;
   border-radius: 10px;
+}
+
+#mytitle {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  height: 70px;
+  background-color: rgb(243, 198, 83);
+  justify-content: space-around;
+  align-items: center;
+}
+.picos {
+  background-color: grey;
+  padding: 10px;
+  border-radius: 100%;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+
+.picos:hover {
+  background-color: rgb(102, 125, 255);
+}
+
+#myform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+
+#mycategories {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#mysearch {
+  width: 30%;
+}
+
+.mycard-footer {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+
+.btn-mas {
+  background-color: rgb(60, 60, 255);
+  color: white;
+  padding: 15px;
+  border-radius: 5%;
+}
+
+footer {
+  background-color: hsl(218, 62.2%, 95%)
+}
+
+#instagram {
+  background-color: #ac2bac;
+}
+
+#facebook {
+  
 }
