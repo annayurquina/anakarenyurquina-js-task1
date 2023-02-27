@@ -1,2 +1,4 @@
+.gitignore
 .hintrc
 favicon_prueba.ico
+.vscode/*
