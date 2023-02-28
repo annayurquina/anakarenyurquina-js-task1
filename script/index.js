@@ -184,12 +184,8 @@ for (let event of data.events) {
           <h3>${event.name}</h3>
           <p><span>Date:</span> ${event.date}</p>
           <h5><span>Description:</span> ${event.description}</h5>
-          <p><span>Category:</span> ${event.category}</p>
-          <p><span>Place:</span> ${event.place}</p>
-          <p><span>Capacity:</span> ${event.capacity}</p>
-          <p><span>Assistance:</span> ${event.assistance}</p>
-          </div>
-          <div class="mycard-footer">
+        </div>
+        <div class="mycard-footer">
           <p><span>Price:</span> ${event.price}</p>
           <a href="./detail.html" class="btn-mas">Ver más...</a>
         </div>

@@ -96,11 +96,21 @@ section, footer {
   width: 10%;
 }
 
+.card{
+  /*background-color: #C13584;*/
+  max-height: 500px;
+  min-height: 500px;
+}
+
+.span {
+  font-weight: bold;
+}
+
 .mycard-footer {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 20px;
 }
+
 
 .btn-mas {
   background-color: rgb(60, 60, 255);
