@@ -34,16 +34,13 @@ section, footer {
   margin-left: auto;
   margin-right: auto;
 }
+
 #logo {
   width: 250px;
 }
 
-#btn-search {
-  background-color: grey;
-  padding: 5px;
-  height: 25px;
-  width:25px;
-  border-radius: 10px;
+#icon-search {
+  font-size: 16px;
 }
 
 #mytitle {
@@ -54,6 +51,10 @@ section, footer {
   background-color: rgb(243, 198, 83);
   justify-content: space-around;
   align-items: center;
+}
+
+.a-picos {
+  color: black;
 }
 .picos {
   background-color: grey;
@@ -66,34 +67,6 @@ section, footer {
 
 .picos:hover {
   background-color: rgb(102, 125, 255);
-}
-
-#myform {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 70px;
-}
-
-#mycategories {
-  width: 70%;
-  display: flex;
-  justify-content: space-around;
-}
-
-#mysearch {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 30%;
-}
-
-.text-search {
-  width: 90%;
-}
-
-.icon-search{
-  width: 10%;
 }
 
 .card{
@@ -110,7 +83,6 @@ section, footer {
   display: flex;
   justify-content: space-around;
 }
-
 
 .btn-mas {
   background-color: rgb(60, 60, 255);
