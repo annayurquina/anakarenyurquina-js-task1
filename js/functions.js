@@ -3,7 +3,7 @@ function createAcard(myevent, disable) {
   if (disable === true) {
     link=``
   } else {
-    link=`<a href="./detail.html" class="btn-mas">Ver más...</a>`
+    link=`<a href="./detail.html?_id=${myevent._id}" class="btn-mas">Ver más...</a>`
   }
   return `
   <div class="col-12 col-md-6 col-lg-4">
