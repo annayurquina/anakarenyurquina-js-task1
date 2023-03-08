@@ -21,11 +21,9 @@
         <div class="container-fluid">
           <figure class="navbar-brand"><img id="logo" class="img-fluid" src="./img/Logo_Amazing_Events.png" alt="logo"></figure>
           <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-controls="mynavbar" aria-expanded="false" aria-label="menu sandwitch">
-          <!--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
             <span class="navbar-toggler-icon"></span>
           </button>
           <div id="mynavbar" class="collapse navbar-collapse">
-          <!--<div class="collapse navbar-collapse" id="navbarSupportedContent">-->
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
               <li class="nav-item"><a class="nav-link" href="./upcoming.html">Upcoming Events</a></li>
@@ -41,21 +39,19 @@
   <main>
     <section>
       <div>
-        <div>
-          <div id="mytitle" class="row text-center">
-            <div class="col-3">
-              <a class="a-picos" href="./stats.html">
-              <i class="picos bi bi-chevron-compact-left"></i>
-              </a>
-            </div>
-            <div class="col-6">
-              <h1>Home</h1>
-            </div>
-            <div class="col-3">
-              <a class="a-picos" href="./upcoming.html">
-                <i class="picos bi bi-chevron-compact-right"></i>
-              </a>
-            </div>
+        <div id="mytitle" class="row text-center">
+          <div class="col-3">
+            <a class="a-picos" href="./stats.html">
+            <i class="picos bi bi-chevron-compact-left"></i>
+            </a>
+          </div>
+          <div class="col-6">
+            <h1>Home</h1>
+          </div>
+          <div class="col-3">
+            <a class="a-picos" href="./upcoming.html">
+              <i class="picos bi bi-chevron-compact-right"></i>
+            </a>
           </div>
         </div>
         <form action="none" class="row mt-4 mb-4">
@@ -67,7 +63,7 @@
           <div class="col-4">
             <div class="form-outline d-flex flex-row justify-content-start align-items-center" id="container-search">
               <input type="search" placeholder="Search" id="form-search" class="form-control flex-grow-1" aria-label="Search">
-              <label for="form-search" class="flex-shrink-0 ms-2 me-4 btn btn-primary"><i id="icon-search" class="bi bi-search"></i></label>
+              <label id="label-icon-search" for="form-search" class="flex-shrink-0 ms-2 me-4 btn btn-primary"><i id="icon-search" class="bi bi-search"></i></label>
             </div>
           </div>
         </form>

@@ -21,25 +21,36 @@ function createAcard(myevent) {
   //return card
 }
 
-function createCards(typeEvent = 0) {
-  let cardEvents = []
+function arrayEvents(typeEvent) {
+  let myarray=[]
   for (let event of data.events) {
     switch (typeEvent) {
-      case 0: cardEvents.push(createAcard(event))
+      case 0://todos
+        myarray.push(event)
         break
-      case 1: //pasado
+      case 1://pasados
         if (event.date < data.currentDate) {
-          cardEvents.push(createAcard(event))
+          myarray.push(event)
         }
         break
-      case 2: //futuro
+      case 2://futuro
         if (event.date >= data.currentDate) {
-          cardEvents.push(createAcard(event))
+          myarray.push(event)
         }
         break
-      default: console.log("********** NO DEBERIA VER ESTO **********")
+      default:
+        console.log("*********************No deberia ver este mensaje*********************")
         break
     }
+  }
+  return myarray
+}
+
+function createCards(typeEvent,arrayObjEvents) {
+  let cardEvents = []
+  
+  for (let event of arrayObjEvents) {
+    cardEvents.push(createAcard(event))
   }
   return cardEvents
 }
@@ -62,17 +73,34 @@ function createAcategory(oneCategory) {
   </div>`
 }
 
-function printElements(listElements,myContainerID) {
+function printElements(listElementsHTML, myContainerID) {
   let mycontainer = document.querySelector(myContainerID)
-  mycontainer.innerHTML=listElements.join('')
+  mycontainer.innerHTML=listElementsHTML.join('')
 }
 
 /*-----------------funciones de filtro-----------------*/
 
-function captureData() {
+function captureData(typeEvent) {
   let mytext = document.querySelector("#form-search").value
-  let mychecks = document.querySelectorAll(".category:checked")
-  console.log(mytext)
+  let mychecks = Array.from(document.querySelectorAll(".category:checked")).map(onecheck=>onecheck.value)
+  /*console.log(mytext)
+  console.log("lista checks: ")
   console.log(mychecks)
+  let data_on_filter = {
+    text_on_filter: mytext,
+    checks_on_filter: mychecks.map(onecheck => onecheck.value)
+  }
+  console.log(data_on_filter)*/
+  /*let arrayofevents=arrayEvents(typeEvent)*/
+  let arrayfilter = arrayEvents(typeEvent).filter(event => {
+    return (
+      (mychecks.length === 0 || mychecks.includes(event.category))
+    ) && (
+      event.name.includes(mytext)
+    )
+  })
 
+  let myarray=createCards(typeEvent,arrayfilter)//array de cards de eventos
+
+  return myarray
 }

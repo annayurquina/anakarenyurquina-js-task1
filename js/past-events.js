@@ -1,10 +1,10 @@
-index_events=createCards(1)
+index_events=createCards(1,arrayEvents(1))
 
 printElements(index_events, "#mycontainer-cards")
 
 printElements(arrayCategoriesStr().map((mycategory) => createAcategory(mycategory)), "#myContainerCategories")
 
-let btnsearch = document.querySelector("#icon-search")
+let btnsearch = document.querySelector("#label-icon-search")
 btnsearch.addEventListener("click", () => {
-  captureData()
+  printElements(captureData(1), "#mycontainer-cards")
 })
