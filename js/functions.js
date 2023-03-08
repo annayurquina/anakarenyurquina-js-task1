@@ -44,29 +44,35 @@ function createCards(typeEvent = 0) {
   return cardEvents
 }
 
-function printCards(cardEvents,myContainerID) {
-  let mycontainer = document.querySelector(myContainerID)
-  mycontainer.innerHTML=cardEvents.join('')
+function arrayCategoriesStr() {
+  let categories = []
+  data.events.forEach(event => {
+    if (!categories.includes(event.category)) {
+      categories.push(event.category)
+    }
+  })
+  return categories;
 }
-
-let categories = []
-data.events.forEach(event => {
-  if (!categories.includes(event.category)) {
-    categories.push(event.category)
-  }
-})
 
 function createAcategory(oneCategory) {
   return `
-  <div class="text-center form-check flex-fill">
-    <label for="${oneCategory}" class="form-ckeck-label">${oneCategory}</label>
-    <input type="checkbox" class="form-checkinput" value="category" id="${oneCategory}">
+  <div class="text-center form-check">
+    <label class="form-ckeck-label" for="${oneCategory}">${oneCategory}</label>
+    <input class="form-check-input category" type="checkbox" value="${oneCategory}" name="category" id="${oneCategory}">
   </div>`
 }
 
-
-function printCategories(myContainerID) {
-  let templateCategories = categories.map((mycategory) => createAcategory(mycategory))
+function printElements(listElements,myContainerID) {
   let mycontainer = document.querySelector(myContainerID)
-  mycontainer.innerHTML=templateCategories.join('')
+  mycontainer.innerHTML=listElements.join('')
+}
+
+/*-----------------funciones de filtro-----------------*/
+
+function captureData() {
+  let mytext = document.querySelector("#form-search").value
+  let mychecks = document.querySelectorAll(".category:checked")
+  console.log(mytext)
+  console.log(mychecks)
+
 }

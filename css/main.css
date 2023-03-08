@@ -43,6 +43,19 @@ section, footer {
   font-size: 16px;
 }
 
+@media screen and (max-width:700px){
+  #container-search {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  /*#form-search{
+    
+  }*/
+}
+
 #mytitle {
   display: flex;
   margin-left: auto;

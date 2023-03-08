@@ -20,29 +20,27 @@
       <nav class="navbar navbar-expand-md bg-light border-3 border-bottom border-primary">
         <div class="container-fluid">
           <figure class="navbar-brand"><img id="logo" class="img-fluid" src="./img/Logo_Amazing_Events.png" alt="logo"></figure>
-          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bd-target="#mynavbar" aria-expanded="true">
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-controls="mynavbar" aria-expanded="false" aria-label="menu sandwitch">
+          <!--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
             <span class="navbar-toggler-icon"></span>
           </button>
-        <div id="mynavbar" class="collapse navbar-collapse">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="./upcoming.html">Upcoming Events</a></li>
-            <li class="nav-item"><a class="nav-link" href="./past-events.html">Past Events</a></li>
-            <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
-            <li class="nav-item"><a class="nav-link" href="./stats.html">Stats</a></li>
-          </ul>
+          <div id="mynavbar" class="collapse navbar-collapse">
+          <!--<div class="collapse navbar-collapse" id="navbarSupportedContent">-->
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="./upcoming.html">Upcoming Events</a></li>
+              <li class="nav-item"><a class="nav-link" href="./past-events.html">Past Events</a></li>
+              <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="./stats.html">Stats</a></li>
+            </ul>
+          </div>
         </div>
-       </nav>
+      </nav>
     </div>
   </header>
   <main>
     <section>
       <div>
-        <!--<div id="mytitle">
-          <a class="picos" href="./stats.html">&#60;</a>
-          <h1>Home</h1>
-          <a class="picos" href="./upcoming.html">&#62;</a>
-        </div>-->
         <div>
           <div id="mytitle" class="row text-center">
             <div class="col-3">
@@ -62,21 +60,21 @@
         </div>
         <form action="none" class="row mt-4 mb-4">
           <div class="col-8">
-            <div class="d-flex flex-row justify-content-evenly flex-wrap" id="myContainerCategories">
-              
+            <div class="d-flex flex-row justify-content-evenly align-content-center flex-wrap" id="myContainerCategories">
+              <!--Aqui cargan las categorias-->
             </div>
           </div>
           <div class="col-4">
-            <div class="row form-outline">
-              <input type="search" placeholder="Search" id="form-search" class="col form-control" aria-label="Search">
-              <label for="form-search" class="col col-sm-2 ms-2 me-4 btn btn-primary"><i id="icon-search" class="bi bi-search"></i></label>
+            <div class="form-outline d-flex flex-row justify-content-start align-items-center" id="container-search">
+              <input type="search" placeholder="Search" id="form-search" class="form-control flex-grow-1" aria-label="Search">
+              <label for="form-search" class="flex-shrink-0 ms-2 me-4 btn btn-primary"><i id="icon-search" class="bi bi-search"></i></label>
             </div>
           </div>
         </form>
       </div>
       <article class="container">
       <div class="row g-3" id="mycontainer-cards">
-        
+        <!--Aqui van las card de eventos-->
       </div>
       </article>
     </section>
@@ -98,7 +96,7 @@
   </div>
 </footer>
 
-    <!--<a href="https://www.flaticon.es/iconos-gratis/facebook" title="facebook iconos">Facebook iconos creados por Freepik - Flaticon</a>-->
+<!--<a href="https://www.flaticon.es/iconos-gratis/facebook" title="facebook iconos">Facebook iconos creados por Freepik - Flaticon</a>-->
 
 <script src="./js/data.js"></script>
 <script src="./js/functions.js"></script>
