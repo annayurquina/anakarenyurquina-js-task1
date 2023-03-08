@@ -22,8 +22,10 @@ function createCardDetail(oneEvent) {
         <h5 class="card-title">${oneEvent.name}</h5>
         <p class="card-text"><span>Date:</span> ${oneEvent.date}</p>
         <p class="card-text"><span>Description:</span> ${oneEvent.description}</p>
+        <p class="card-text"><span>Category:</span> ${oneEvent.category}</p>
+        <p class="card-text"><span>Place:</span> ${oneEvent.place}</p>
       </div>
-      <div class="mycard-footer">
+      <div class="card-footer">
         <p><span>Price:</span> ${oneEvent.price}</p>
       </div>
     </div>
