@@ -1,4 +1,4 @@
-let cardEvents = []
+/*let cardEvents = []
 for (let event of data.events) {
   if (event.date<data.currentDate) {
     let card = `
@@ -25,9 +25,7 @@ for (let event of data.events) {
   }
 }
 
-function printCards() {
-  let mycontainer = document.querySelector("#mycontainer-cards")
-  mycontainer.innerHTML=cardEvents.join('')
-}
+printCards()*/
+index_events=createCards(1)
 
-printCards()
+printCards(index_events,"#mycontainer-cards")
