@@ -11,12 +11,12 @@ function createAcard(myevent, disable) {
       <figure>
         <img class="img-card img-fluid mt-3" src=${myevent.image} alt=${myevent.name}>
       </figure>
-      <div>
-        <h3>${myevent.name}</h3>
-        <p><span>Date:</span> ${myevent.date}</p>
-        <h5><span>Description:</span> ${myevent.description}</h5>
+      <div class="card-body">
+        <h5 class="card-title">${myevent.name}</h5>
+        <p class="card-text"><span>Date:</span> ${myevent.date}</p>
+        <p class="card-text"><span>Description:</span> ${myevent.description}</p>
       </div>
-      <div class="mycard-footer">
+      <div class="card-footer mycard-footer">
         <p><span>Price:</span> ${myevent.price}</p>
         ${link}
       </div>

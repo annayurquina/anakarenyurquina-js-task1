@@ -84,8 +84,9 @@ section, footer {
 
 .card{
   /*background-color: #C13584;*/
-  max-height: 500px;
-  min-height: 500px;
+  /*max-height: 500px;*/
+  min-width: 18rem;
+  min-height: 30rem;
 }
 
 .span {
@@ -98,15 +99,25 @@ section, footer {
 }
 
 .btn-mas {
-  background-color: rgb(60, 60, 255);
+  background-color: #0B5ED7;
   color: white;
   padding: 15px;
   border-radius: 5%;
 }
 
+.btn-mas:hover, .form-check:hover {
+  /*background-color: rgb(243, 198, 83);*/
+  background-color: #0a58ca;
+}
+
 .btn-disable{
   cursor: not-allowed;
   pointer-events: none;
+}
+
+.form-check {
+  padding: 3px;
+  border-radius: 7%;
 }
 
 footer {
