@@ -1,4 +1,4 @@
-index_events = createCards(0,arrayEvents(0))
+index_events = createCards(arrayEvents(0),'')
 
 printElements(index_events, "#mycontainer-cards")
 

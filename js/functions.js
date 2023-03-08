@@ -1,4 +1,10 @@
-function createAcard(myevent) {
+function createAcard(myevent, disable) {
+  let link=""
+  if (disable === true) {
+    link=``
+  } else {
+    link=`<a href="./detail.html" class="btn-mas">Ver más...</a>`
+  }
   return `
   <div class="col-12 col-md-6 col-lg-4">
     <div class="card text-center">
@@ -12,7 +18,7 @@ function createAcard(myevent) {
       </div>
       <div class="mycard-footer">
         <p><span>Price:</span> ${myevent.price}</p>
-        <a href="./detail.html" class="btn-mas">Ver más...</a>
+        ${link}
       </div>
     </div>
   </div>
@@ -46,11 +52,10 @@ function arrayEvents(typeEvent) {
   return myarray
 }
 
-function createCards(typeEvent,arrayObjEvents) {
+function createCards(arrayObjEvents,disable=false) {
   let cardEvents = []
-  
   for (let event of arrayObjEvents) {
-    cardEvents.push(createAcard(event))
+    cardEvents.push(createAcard(event,disable))
   }
   return cardEvents
 }
@@ -79,6 +84,16 @@ function printElements(listElementsHTML, myContainerID) {
 }
 
 /*-----------------funciones de filtro-----------------*/
+function noFoundEvent() {
+  let noFound = [{
+    image: "https://user-images.githubusercontent.com/24848110/33519396-7e56363c-d79d-11e7-969b-09782f5ccbab.png",
+    name: "NO MATCHES",
+    date: "----/--/--",
+    description: "-",
+    price:"-"
+  }]
+  return noFound
+}
 
 function captureData(typeEvent) {
   let mytext = document.querySelector("#form-search").value
@@ -100,7 +115,10 @@ function captureData(typeEvent) {
     )
   })
 
-  let myarray=createCards(typeEvent,arrayfilter)//array de cards de eventos
-
-  return myarray
+  let myarray = createCards(arrayfilter,'')//array de cards de eventos
+  if (myarray.length > 0) {
+    return myarray
+  } else {
+    return createCards(noFoundEvent(),true)
+  }
 }

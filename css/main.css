@@ -104,6 +104,11 @@ section, footer {
   border-radius: 5%;
 }
 
+.btn-disable{
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 footer {
   background-color: hsl(218, 62.2%, 95%);
   display: flex;
