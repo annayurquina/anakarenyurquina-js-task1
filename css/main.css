@@ -105,7 +105,7 @@ section, footer {
   border-radius: 5%;
 }
 
-.btn-mas:hover, .form-check:hover {
+.btn-mas:hover, .form-check-label:hover {
   /*background-color: rgb(243, 198, 83);*/
   background-color: #0a58ca;
 }
@@ -115,7 +115,7 @@ section, footer {
   pointer-events: none;
 }
 
-.form-check {
+.form-check-label{
   padding: 3px;
   border-radius: 7%;
 }

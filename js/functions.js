@@ -73,7 +73,7 @@ function arrayCategoriesStr() {
 function createAcategory(oneCategory) {
   return `
   <div class="text-center form-check">
-    <label class="form-ckeck-label" for="${oneCategory}">${oneCategory}</label>
+    <label class="form-check-label" for="${oneCategory}">${oneCategory}</label>
     <input class="form-check-input category" type="checkbox" value="${oneCategory}" name="category" id="${oneCategory}">
   </div>`
 }
