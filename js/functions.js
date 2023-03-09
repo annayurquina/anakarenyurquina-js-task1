@@ -3,7 +3,7 @@ function createAcard(myevent, disable) {
   if (disable === true) {
     link=``
   } else {
-    link=`<a href="./detail.html" class="btn-mas">Ver más...</a>`
+    link=`<a href="./detail.html?_id=${myevent._id}" class="btn-mas">Ver más...</a>`
   }
   return `
   <div class="col-12 col-md-6 col-lg-4">
@@ -11,12 +11,12 @@ function createAcard(myevent, disable) {
       <figure>
         <img class="img-card img-fluid mt-3" src=${myevent.image} alt=${myevent.name}>
       </figure>
-      <div>
-        <h3>${myevent.name}</h3>
-        <p><span>Date:</span> ${myevent.date}</p>
-        <h5><span>Description:</span> ${myevent.description}</h5>
+      <div class="card-body">
+        <h5 class="card-title">${myevent.name}</h5>
+        <p class="card-text"><span>Date:</span> ${myevent.date}</p>
+        <p class="card-text"><span>Description:</span> ${myevent.description}</p>
       </div>
-      <div class="mycard-footer">
+      <div class="card-footer mycard-footer">
         <p><span>Price:</span> ${myevent.price}</p>
         ${link}
       </div>
@@ -73,7 +73,7 @@ function arrayCategoriesStr() {
 function createAcategory(oneCategory) {
   return `
   <div class="text-center form-check">
-    <label class="form-ckeck-label" for="${oneCategory}">${oneCategory}</label>
+    <label class="form-check-label" for="${oneCategory}">${oneCategory}</label>
     <input class="form-check-input category" type="checkbox" value="${oneCategory}" name="category" id="${oneCategory}">
   </div>`
 }
@@ -97,24 +97,16 @@ function noFoundEvent() {
 
 function captureData(typeEvent) {
   let mytext = document.querySelector("#form-search").value
-  let mychecks = Array.from(document.querySelectorAll(".category:checked")).map(onecheck=>onecheck.value)
-  /*console.log(mytext)
-  console.log("lista checks: ")
-  console.log(mychecks)
-  let data_on_filter = {
-    text_on_filter: mytext,
-    checks_on_filter: mychecks.map(onecheck => onecheck.value)
-  }
-  console.log(data_on_filter)*/
-  /*let arrayofevents=arrayEvents(typeEvent)*/
+  mytext=mytext.toLowerCase().trim()
+  let mychecks = Array.from(document.querySelectorAll(".category:checked")).map(onecheck => onecheck.value)
+
   let arrayfilter = arrayEvents(typeEvent).filter(event => {
     return (
       (mychecks.length === 0 || mychecks.includes(event.category))
     ) && (
-      event.name.includes(mytext)
+      event.name.toLowerCase().includes(mytext)
     )
   })
-
   let myarray = createCards(arrayfilter,'')//array de cards de eventos
   if (myarray.length > 0) {
     return myarray
