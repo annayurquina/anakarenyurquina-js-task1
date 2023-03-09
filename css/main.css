@@ -123,10 +123,7 @@ section, footer {
 
 footer {
   background-color: hsl(218, 62.2%, 95%);
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-top: 30px;
+  margin-top: 2rem;
 }
 
 .social:hover{
@@ -137,4 +134,8 @@ footer {
   height: 180px;
   width: 300px;
   object-fit: cover;
+}
+
+.card-detail {
+  min-width: 70rem;
 }

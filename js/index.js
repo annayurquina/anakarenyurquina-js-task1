@@ -4,11 +4,18 @@ printElements(index_events, "#mycontainer-cards")
 
 printElements(arrayCategoriesStr().map((mycategory) => createAcategory(mycategory)), "#myContainerCategories")
 
-function filterIndex() {
-  let btnsearch = document.querySelector("#label-icon-search")
-  btnsearch.addEventListener("click", () => {
-    printElements(captureData(0), "#mycontainer-cards")
-  })
-}
+let textSearch = document.querySelector("#form-search")
+textSearch.addEventListener("keyup", (keyboard) => {
+  if (keyboard.which === 13) {
+    filterIndex()
+  }
+})
 
-filterIndex()
+let btnsearch = document.querySelector("#label-icon-search")
+btnsearch.addEventListener("click", () => {
+  filterIndex()
+})
+
+function filterIndex() {
+  printElements(captureData(0), "#mycontainer-cards")
+}

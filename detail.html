@@ -25,7 +25,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div id="mynavbar" class="collapse navbar-collapse">
-            <ul class="navbar-nav ms-3">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
               <li class="nav-item"><a class="nav-link" href="./upcoming.html">Upcoming Events</a></li>
               <li class="nav-item"><a class="nav-link" href="./past-events.html">Past Events</a></li>
@@ -39,14 +39,14 @@
   </header>
   <main>
     <section>
-      <article class="container">
-        <h2>Esto es el detail</h2>
+      <article id="container-detail" class="container">
+        <!--Aqui va la car con detalles-->
       </article>
     </section>
   </main>
   <!--Footer-->
-  <footer>
-    <div class="container p-5">    
+  <footer class="d-flex justify-content-between align-items-center p-5">
+    <div class="d-flex flex-grow-1">    
       <!-- Instagram -->
       <i id="icon-ig" class="bi bi-instagram"></i>
   
@@ -56,11 +56,10 @@
       <!--Whatsapp-->
       <i id="icon-wpp" class="bi bi-whatsapp"></i>
     </div>
-    <div>
-      <h2 class="me-5">FE05-TN</h2>
-    </div>
+    <h2>FE05-TN</h2>
   </footer> 
-  
+  <script src="./js/data.js"></script>
+  <script src="./js/detail.js"></script>
   <!--<a href="https://www.flaticon.es/iconos-gratis/facebook" title="facebook iconos">Facebook iconos creados por Freepik - Flaticon</a>-->
   </body>
   </html>
