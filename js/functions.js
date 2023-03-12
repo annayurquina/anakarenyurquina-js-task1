@@ -1,4 +1,5 @@
-function createAcard(myevent, disable) {
+function createAcard(myevent, disable) {//myevent: es un objeto evento...disable es para habilitar o no el link de detalle
+  //se deshabilita el detalle para el NOT FOUND
   let link=""
   if (disable === true) {
     link=``
@@ -23,13 +24,13 @@ function createAcard(myevent, disable) {
     </div>
   </div>
   `
-  //console.log(card)
-  //return card
 }
 
-function arrayEvents(typeEvent) {
+function arrayEvents(typeEvent, arrayEvents) {//devuelve array de objetos eventos filtrado
+  //typeEvent: tipo de evento (index,past,upcoming)
+  //arrayEvents: array de objetos eventos
   let myarray=[]
-  for (let event of data.events) {
+  for (let event of arrayEvents) {
     switch (typeEvent) {
       case 0://todos
         myarray.push(event)
@@ -52,7 +53,9 @@ function arrayEvents(typeEvent) {
   return myarray
 }
 
-function createCards(arrayObjEvents,disable=false) {
+function createCards(arrayObjEvents, disable = false) {//crea array de eventos en HTML para el DOM
+  //arrayObjEvents: array de objetos Eventos
+  //disable: es si el link de detalle se muestra o no, por defecto se muestra
   let cardEvents = []
   for (let event of arrayObjEvents) {
     cardEvents.push(createAcard(event,disable))
@@ -60,9 +63,10 @@ function createCards(arrayObjEvents,disable=false) {
   return cardEvents
 }
 
-function arrayCategoriesStr() {
+function arrayCategoriesStr(arrayObjEvents) {//crea array de string, donde estan las categorías de la lista de eventos
+  //arrayObjEvents: es la lista de objetos eventos
   let categories = []
-  data.events.forEach(event => {
+  arrayObjEvents.forEach(event => {
     if (!categories.includes(event.category)) {
       categories.push(event.category)
     }
@@ -70,21 +74,29 @@ function arrayCategoriesStr() {
   return categories;
 }
 
-function createAcategory(oneCategory) {
+function createCategoryHTML(oneCategory) {//crea una categoría checkbox para incrustar en el DOM
+  //oneCategory: es el string, con el nombre de la categoria
   return `
-  <div class="text-center form-check">
+  <div id="check-boxes" class="form-check m-2">
     <label class="form-check-label" for="${oneCategory}">${oneCategory}</label>
     <input class="form-check-input category" type="checkbox" value="${oneCategory}" name="category" id="${oneCategory}">
   </div>`
 }
 
-function printElements(listElementsHTML, myContainerID) {
+function printElements(listElementsHTML, myContainerID) {//incrusta los html en el DOM
   let mycontainer = document.querySelector(myContainerID)
   mycontainer.innerHTML=listElementsHTML.join('')
 }
 
+
+
+
+
+
 /*-----------------funciones de filtro-----------------*/
-function noFoundEvent() {
+
+
+function noFoundEvent() {//objeto para card de evento no encontrado
   let noFound = [{
     image: "https://user-images.githubusercontent.com/24848110/33519396-7e56363c-d79d-11e7-969b-09782f5ccbab.png",
     name: "NO MATCHES",
@@ -95,22 +107,27 @@ function noFoundEvent() {
   return noFound
 }
 
-function captureData(typeEvent) {
+function captureFilteredEvents(arrayObjEvents) {
+  
   let mytext = document.querySelector("#form-search").value
-  mytext=mytext.toLowerCase().trim()
-  let mychecks = Array.from(document.querySelectorAll(".category:checked")).map(onecheck => onecheck.value)
+  mytext = mytext.toLowerCase().trim()//convierte texto de search en minusculas y quita espacios
+  let mychecks = Array.from(document.querySelectorAll(".category:checked")).map(onecheck => onecheck.value)//crea array de los check activados
 
-  let arrayfilter = arrayEvents(typeEvent).filter(event => {
+  let arrayfilter = arrayObjEvents.filter(event => {
     return (
       (mychecks.length === 0 || mychecks.includes(event.category))
     ) && (
       event.name.toLowerCase().includes(mytext)
     )
-  })
+  })//crea array de obj eventos de las categorías elegidas
   let myarray = createCards(arrayfilter,'')//array de cards de eventos
   if (myarray.length > 0) {
     return myarray
   } else {
     return createCards(noFoundEvent(),true)
   }
+}
+
+function myFilter(arrayObjEvents,containerID) {
+  printElements(captureFilteredEvents(arrayObjEvents), containerID)
 }

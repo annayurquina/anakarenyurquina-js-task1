@@ -42,7 +42,7 @@
         <div id="mytitle" class="row text-center">
           <div class="col-3">
             <a class="a-picos" href="./index.html">
-            <i class="picos bi bi-chevron-compact-left"></i>
+              <i class="picos bi bi-chevron-compact-left"></i>
             </a>
           </div>
           <div class="col-6">
@@ -54,17 +54,17 @@
             </a>
           </div>
         </div>
-        <div class="row mt-4 mb-4">
-          <div class="col-8">
-            <div class="d-flex flex-row justify-content-evenly align-content-center flex-wrap" id="myContainerCategories">
-              <!--Aqui cargan las categorias-->
-            </div>
+        <div id="container-category-search" class="row mt-4 mb-4 containerFilters">
+          <div class="col-8 d-flex flex-row justify-content-evenly align-content-center align-items-center flex-wrap" id="myContainerCategories">
+            <!--Aqui cargan las categorias-->
           </div>
-          <div class="col-4">
-            <div class="form-outline d-flex flex-row justify-content-start align-items-center" id="container-search">
-              <input type="search" placeholder="Search" id="form-search" class="form-control flex-grow-1" aria-label="Search">
-              <label id="label-icon-search" for="form-search" class="flex-shrink-0 ms-2 me-4 btn btn-primary"><i id="icon-search" class="bi bi-search"></i></label>
-            </div>
+          <div id="container-search" class="col-4 d-flex flex-row justify-content-start align-content-center align-items-center" id="container-search">
+            <input type="text" placeholder="Name" id="form-search" class="form-control mt-1" aria-label="Search" name="text-name">
+          </div>
+          <div class="containerFilters row mt-2">
+            <button id="label-icon-search" type="button" class="btn btn-primary btn-lg">
+              <i id="icon-search" class="bi bi-search"></i>
+            </button>
           </div>
         </div>
       </div>
