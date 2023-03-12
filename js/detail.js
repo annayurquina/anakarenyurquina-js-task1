@@ -5,28 +5,41 @@ let myparams = new URLSearchParams(myquery)
 //console.log("🚀 ~ myparams:", myparams)
 
 let myIDquery = myparams.get('_id')
-console.log("🚀 ~ myIDquery:", myIDquery)
+//console.log("🚀 ~ myIDquery:", myIDquery)
 
 /*let objetoEventoEncontrado=data.events.find(event=>event._id==myIDquery)
 console.log("🚀 ~ file: detail.js:11 ~ objetoEventoEncontrado:", objetoEventoEncontrado)*/
 
 function createCardDetail(oneEvent) {
   //console.log(oneEvent);
+  let vble = ``
+  if (oneEvent.assistance) {
+    vble=`<p class="card-text"><span>Assistance:</span> ${oneEvent.assistance}</p>`
+  }
+  if (oneEvent.estimate) {
+    vble=`<p class="card-text"><span>Estimate:</span> ${oneEvent.estimate}</p>`
+  }
   return `
   <div class="col-12 col-md-6 col-lg-4">
-    <div class="card text-center">
+    <div class="card card-detail">
       <figure>
-        <img class="img-card img-fluid mt-3" src=${oneEvent.image} alt=${oneEvent.name}>
+        <img class="card-img-top img-cover mt-3" src=${oneEvent.image} alt=${oneEvent.name}>
       </figure>
       <div class="card-body">
-        <h5 class="card-title">${oneEvent.name}</h5>
-        <p class="card-text"><span>Date:</span> ${oneEvent.date}</p>
+        <h5 class="card-title text-center">${oneEvent.name}</h5>
         <p class="card-text"><span>Description:</span> ${oneEvent.description}</p>
-        <p class="card-text"><span>Category:</span> ${oneEvent.category}</p>
-        <p class="card-text"><span>Place:</span> ${oneEvent.place}</p>
+        <div class="d-flex justify-content-between">
+          <p class="card-text"><span>Date:</span> ${oneEvent.date}</p>
+          <p class="card-text"><span>Category:</span> ${oneEvent.category}</p>
+          <p class="card-text"><span>Place:</span> ${oneEvent.place}</p>
+        </div>
+        <div class="d-flex justify-content-around">
+          <p class="card-text"><span>Capacity:</span> ${oneEvent.capacity}</p>
+          ${vble}
+        </div>
       </div>
       <div class="card-footer">
-        <p><span>Price:</span> ${oneEvent.price}</p>
+        <p class="card-text"><span>Price:</span> ${oneEvent.price}</p>
       </div>
     </div>
   </div>
