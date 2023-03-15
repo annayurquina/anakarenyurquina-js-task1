@@ -20,27 +20,25 @@ function createCardDetail(oneEvent) {
     vble=`<p class="card-text"><span>Estimate:</span> ${oneEvent.estimate}</p>`
   }
   return `
-  <div class="col-12 col-md-6 col-lg-4">
-    <div class="card card-detail">
-      <figure>
-        <img class="card-img-top img-cover mt-3" src=${oneEvent.image} alt=${oneEvent.name}>
-      </figure>
-      <div class="card-body">
-        <h5 class="card-title text-center">${oneEvent.name}</h5>
-        <p class="card-text"><span>Description:</span> ${oneEvent.description}</p>
-        <div class="d-flex justify-content-between">
-          <p class="card-text"><span>Date:</span> ${oneEvent.date}</p>
-          <p class="card-text"><span>Category:</span> ${oneEvent.category}</p>
-          <p class="card-text"><span>Place:</span> ${oneEvent.place}</p>
-        </div>
-        <div class="d-flex justify-content-around">
-          <p class="card-text"><span>Capacity:</span> ${oneEvent.capacity}</p>
-          ${vble}
-        </div>
+  <div class="card border-warning">
+    <figure>
+      <img class="card-img-top img-cover" src=${oneEvent.image} alt=${oneEvent.name}>
+    </figure>
+    <div class="card-body">
+      <h5 class="card-header text-center">${oneEvent.name}</h5>
+      <p class="card-text"><span>Description:</span> ${oneEvent.description}</p>
+      <div class="d-flex justify-content-between">
+        <p class="card-text"><span>Date:</span> ${oneEvent.date}</p>
+        <p class="card-text"><span>Category:</span> ${oneEvent.category}</p>
+        <p class="card-text"><span>Place:</span> ${oneEvent.place}</p>
       </div>
-      <div class="card-footer">
-        <p class="card-text"><span>Price:</span> ${oneEvent.price}</p>
+      <div class="d-flex justify-content-around">
+        <p class="card-text"><span>Capacity:</span> ${oneEvent.capacity}</p>
+        ${vble}
       </div>
+    </div>
+    <div class="card-footer">
+      <p class="card-text"><span>Price:</span> ${oneEvent.price}</p>
     </div>
   </div>
   `

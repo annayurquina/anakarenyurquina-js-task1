@@ -107,7 +107,7 @@ function noFoundEvent() {//objeto para card de evento no encontrado
   return noFound
 }
 
-function captureFilteredEvents(arrayObjEvents) {
+function captureFilteredEvents(arrayObjEvents) {//devuelve lista de eventos en formato para el html
   
   let mytext = document.querySelector("#form-search").value
   mytext = mytext.toLowerCase().trim()//convierte texto de search en minusculas y quita espacios

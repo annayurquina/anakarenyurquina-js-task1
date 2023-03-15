@@ -14,29 +14,27 @@
   
   <title>Amazing Events - Home</title>
 </head>
-<body>
+<body class="container-fluid">
   <header>
-    <div class="container-fluid">
-      <nav class="navbar navbar-expand-md bg-light border-3 border-bottom border-primary">
-        <div class="container-fluid">
-          <figure class="navbar-brand"><img id="logo" class="img-fluid" src="./img/Logo_Amazing_Events.png" alt="logo"></figure>
-          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-controls="mynavbar" aria-expanded="false" aria-label="menu sandwitch">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div id="mynavbar" class="collapse navbar-collapse">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="./upcoming.html">Upcoming Events</a></li>
-              <li class="nav-item"><a class="nav-link" href="./past-events.html">Past Events</a></li>
-              <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
-              <li class="nav-item"><a class="nav-link" href="./stats.html">Stats</a></li>
-            </ul>
-          </div>
+    <nav class="navbar navbar-expand-md bg-light border-3 border-bottom border-primary">
+      <div class="container-fluid">
+        <figure class="navbar-brand"><img id="logo" class="img-fluid" src="./img/Logo_Amazing_Events.png" alt="logo"></figure>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-controls="mynavbar" aria-expanded="false" aria-label="menu sandwitch">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="mynavbar" class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="./upcoming.html">Upcoming Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="./past-events.html">Past Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="./stats.html">Stats</a></li>
+          </ul>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
   </header>
-  <main>
+  <main class="pb-5">
     <section>
       <div>
         <div id="mytitle" class="row text-center">
@@ -59,7 +57,7 @@
             <!--Aqui cargan las categorias-->
           </div>
           <div id="container-search" class="col-4 d-flex flex-row justify-content-start align-content-center align-items-center">
-            <input type="text" placeholder="Name" id="form-search" class="form-control mt-1" aria-label="Search" name="text-name">
+            <input type="text" placeholder="Name event" id="form-search" class="form-control mt-1" aria-label="Search" name="text-name">
           </div>
           <div class="containerFilters row mt-2">
             <button id="label-icon-search" type="button" class="btn btn-primary btn-lg">
