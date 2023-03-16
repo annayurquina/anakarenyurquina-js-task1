@@ -2,10 +2,13 @@ let myquery = location.search
 //console.log(myquery)
 
 let myparams = new URLSearchParams(myquery)
-//console.log("🚀 ~ myparams:", myparams)
 
-let myIDquery = myparams.get('_id')
-//console.log("🚀 ~ myIDquery:", myIDquery)
+//esto para evento en archivo local.... descomentar
+//let myIDquery = myparams.get('_id')
+
+//esto para evento en API
+let myIDquery = myparams.get('id')
+//console.log("🚀 ~ file: detail.js:11 ~ myIDquery:", myIDquery)
 
 /*let objetoEventoEncontrado=data.events.find(event=>event._id==myIDquery)
 console.log("🚀 ~ file: detail.js:11 ~ objetoEventoEncontrado:", objetoEventoEncontrado)*/
@@ -58,4 +61,24 @@ function printDetail(containerID,id_event) {
 
 }
 
-printDetail("#container-detail",myIDquery)
+//para data local
+//printDetail("#container-detail",myIDquery)
+
+
+//para API
+function printDetailAPI(containerID,id_event) {
+  let container = document.querySelector(containerID)
+  
+  fetchApi()
+    .then(data => {
+      //console.log(data)
+      let eventfound = data.events.find(event => event.id == id_event)
+      let mydetail = createCardDetail(eventfound)
+      container.innerHTML = mydetail
+    })
+    .catch(error => {
+      console.log("🚀 ~ error:", error)
+  })
+}
+
+printDetailAPI("#container-detail",myIDquery)

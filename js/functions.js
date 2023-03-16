@@ -4,7 +4,11 @@ function createAcard(myevent, disable) {//myevent: es un objeto evento...disable
   if (disable === true) {
     link=``
   } else {
-    link=`<a href="./detail.html?_id=${myevent._id}" class="btn-mas">Ver más...</a>`
+    //esto para evento en archivo local.... descomentar
+    //link=`<a href="./detail.html?id=${myevent._id}" class="btn-mas">Ver más...</a>`
+
+    //esto para evento en API
+    link=`<a href="./detail.html?id=${myevent.id}" class="btn-mas">Ver más...</a>`
   }
   return `
   <div class="col-12 col-md-6 col-lg-4">
@@ -26,9 +30,11 @@ function createAcard(myevent, disable) {//myevent: es un objeto evento...disable
   `
 }
 
-function arrayEvents(typeEvent, arrayEvents) {//devuelve array de objetos eventos filtrado
+/*function arrayEvents(typeEvent, arrayEvents) {//devuelve array de objetos eventos filtrado
+  console.log("🚀 ~ file: functions.js:30 ~ arrayEvents ~ arrayEvents:", arrayEvents)
   //typeEvent: tipo de evento (index,past,upcoming)
   //arrayEvents: array de objetos eventos
+  
   let myarray=[]
   for (let event of arrayEvents) {
     switch (typeEvent) {
@@ -51,7 +57,36 @@ function arrayEvents(typeEvent, arrayEvents) {//devuelve array de objetos evento
     }
   }
   return myarray
+}*/
+
+function arrayEvents(typeEvent, arrayEvents, currentDate=data.currentDate) {//devuelve array de objetos eventos filtrado
+  //typeEvent: tipo de evento (index,past,upcoming)
+  //arrayEvents: array de objetos eventos
+  
+  let myarray=[]
+  for (let event of arrayEvents) {
+    switch (typeEvent) {
+      case 0://todos
+        myarray.push(event)
+        break
+      case 1://pasados
+        if (event.date < currentDate) {
+          myarray.push(event)
+        }
+        break
+      case 2://futuro
+        if (event.date >= currentDate) {
+          myarray.push(event)
+        }
+        break
+      default:
+        console.log("*********************No deberia ver este mensaje*********************")
+        break
+    }
+  }
+  return myarray
 }
+
 
 function createCards(arrayObjEvents, disable = false) {//crea array de eventos en HTML para el DOM
   //arrayObjEvents: array de objetos Eventos
