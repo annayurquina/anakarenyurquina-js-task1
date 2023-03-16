@@ -2,7 +2,7 @@ function myPastEvents() {
   fetchApi()
   .then(data => {
     //console.log(data.events)
-    past_events = arrayEvents(1, data.events, data.currentDate)
+    let past_events = arrayEvents(1, data.events, data.currentDate)
     
     printElements(createCards(past_events, ''), "#mycontainer-cards")
     printElements(arrayCategoriesStr(data.events).map((mycategory) => createCategoryHTML(mycategory)), "#myContainerCategories")
