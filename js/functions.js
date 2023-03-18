@@ -142,11 +142,16 @@ function noFoundEvent() {//objeto para card de evento no encontrado
   return noFound
 }
 
+function categoriesChecked() {
+  return Array.from(document.querySelectorAll(".category:checked")).map(onecheck => onecheck.value)
+}
+
 function captureFilteredEvents(arrayObjEvents) {//devuelve lista de eventos en formato para el html
   
   let mytext = document.querySelector("#form-search").value
   mytext = mytext.toLowerCase().trim()//convierte texto de search en minusculas y quita espacios
-  let mychecks = Array.from(document.querySelectorAll(".category:checked")).map(onecheck => onecheck.value)//crea array de los check activados
+  /*let mychecks = Array.from(document.querySelectorAll(".category:checked")).map(onecheck => onecheck.value)//crea array de los check activados*/
+  let mychecks = categoriesChecked()//crea array de los check activados
 
   let arrayfilter = arrayObjEvents.filter(event => {
     return (
