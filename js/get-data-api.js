@@ -24,11 +24,11 @@ async function fetchApi() {
   }
 }
 
-async function fetchApiGET(timeEvent) {
+async function fetchApiGET(timeEvent="") {
   try {
-    let urlApi = "https://api-amazingevents.onrender.com/api/amazing-events?time="+timeEvent
-    return await getApi(urlApi)
-    
+    let urlApi = "https://api-amazingevents.onrender.com/api/amazing-events?time=" + timeEvent
+    let salida = await getApi(urlApi)
+    return salida
   } catch(error) {
     console.log("ocurrio un error")
     console.log(error)
